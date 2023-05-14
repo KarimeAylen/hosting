@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<style>
+	#container-button{
+	color: rgb(243, 241, 241);
+	padding: 60px;
+	text-align: center;} 
 
+	#container-input{
+	color: rgb(255, 255, 255);
+	padding: 60px;
+	text-align: center;} 
+
+	#container-output{
+	color: rgb(251, 249, 249);
+	padding: 60px;
+	text-align: center;} 
+
+	#output_text{
+	color: rgb(255, 255, 255);
+	padding: 60px;
+	text-align: center;
+	}
+
+	#input_image{
+	color: rgba(246, 252, 255, 0);
+	padding: 60px;
+	text-align: center;
+	}
+	.file{
+		border:none;
+		background-color: indigo;
+		padding: 14px 28px;
+		font-size: 16px;
+		cursor: pointer;
+		display: inline-block;
+	}
+
+	ul {
+  	list-style-type: none;
+	}
+	
+	div {
+	text-align: center;
+	}
+
+	li {
+	background-color: #010f0d00;
+	border: #bf76f0 2px solid;
+	float: left;
+	margin-right: 40px;
+	padding: 0 4px;
+	}
+	
+	
+	
+	</style>
+<!--  <body style="background-color:#b1daf3;">  -->
+	<body>
+	<h1 style="text-align:center; color:rgb(244, 244, 247);font-size:50px;">Transferencia de aprendizaje</h1>
+	<title>Examen 2</title>
+    <!-- https://www.tensorflow.org/js/tutorials?hl=es-419 -->
+    <!-- https://cdnjs.com/libraries/tensorflow/4.5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+	
+    <!-- Creación de contenedor de imagen de entrada -->
+    <div id="container-input">
+		
+        <img style="border:15px solid;color:aliceblue;" src="#" id="input_image" width="400" height="400">
+    </div>
+	
+    <!-- Creación botones para subir y predicción-->    
+    <div id="container-button">
+		<div>	            
+			<input type="file" name="fileupload" accept="image/*" onchange="display(event)">
+			<h2 class="path">La URL de esta imagen es:</h2> <!--Capturando la pág-->
+		</div>	
+		<div>			
+			<input type="button" name="predict" onclick="predict_animal()" value="Predicción"></button> 
+		</div>
+	</div>
+
+   <!-- Despliegue de clases y salida detectada-->   
+    <div id="container-output">
+		<div id="Etiquetas de animales">
+			<ul>
+				<li>Abeja</li>
+                <li>Catarina</li>
+				<li>Cerdito</li>
+				<li>Chimpance</li>
+				<li>Delfin</li>
+				<li>Hormiga</li>
+                <li>Leon</li>
+				<li>Luciernaga</li>
+				<li>Mariposa</li>
+				<li>Panda</li>
+			</ul>
+		</div>		
+		<div id="output_text"></div><!-- animales-->   
+	</div>
+
+    <script src="./mis-scripts.js"></script>
+
+</body>
+</html>
