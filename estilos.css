@@ -1,0 +1,58 @@
+*{
+    margin: 100;
+    padding: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(135deg, #0ae6db, #7dc3ce, #3e7be5, #e0a4c5, #6e6cc0, #ff77c2, #7797ff);
+    background-size: 500%;
+    animation: fanimado 25s infinite;
+}
+
+.texto{
+
+    color:white;
+    text-align: center;
+    margin: 300px 0;
+    font-size: 28px;
+
+}
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+.container-output{
+    width: 800px;
+    height: 800px;
+    border: 5px solid;
+    border-radius: 25px;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+}
+
+.child-element{
+    width: 300px;
+    height: 300px;
+    background-color: azure;
+    border-radius: 25px;
+    justify-self: center;
+    align-self: center;
+}
+
+.fileupload{
+    background-color: rgb(4, 4, 179);
+    border: 0;
+    padding: 40px 35px;
+}
